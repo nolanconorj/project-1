@@ -1,1 +1,43 @@
-img { font-size: : 500%; }
+.jumbotron-custom {
+	background-color: #333333;
+	color: #fff;
+	height: 100vh;
+	width: 100%;
+}
+
+.form-custom{ margin: 10px 25px; }
+
+.weather-size { font-size: 200%; }
+
+.container-custom { 
+	margin: 0 5%; 
+	width: auto;
+}
+
+.panel-twitter {
+	background-color: #00aced;
+	color: #fff;
+}
+
+.panel-orange { 
+	background-color: #d26c22;
+	color: #fff; 
+}
+
+.btn-custom {
+	background-color: #00e645;
+	color: #fff;
+	border-color: #00e645;
+}
+
+.btn-custom:hover {
+	background-color: #fff;
+	color: #00e645;
+	border-color: : #fff;
+}
+
+.color { color: #00e645; }
+
+.jumbotron > .container-fluid > h1 { font-size: 700%; }
+
+#submit { animation-delay: 5s; }
