@@ -14,16 +14,6 @@
 	width: auto;
 }
 
-.panel-twitter {
-	background-color: #00aced;
-	color: #fff;
-}
-
-.panel-orange { 
-	background-color: #d26c22;
-	color: #fff; 
-}
-
 .btn-custom {
 	background-color: #00e645;
 	color: #fff;
@@ -41,3 +31,12 @@
 .jumbotron > .container-fluid > h1 { font-size: 700%; }
 
 #submit { animation-delay: 5s; }
+
+.panel-custom { border-color: #333333 }
+
+.panel-primary > .panel-heading { background-color: #333333; }
+
+#gator-pic {
+	height: 50%;
+	width: 40%;
+}
