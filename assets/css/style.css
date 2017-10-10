@@ -1,8 +1,10 @@
 .jumbotron-custom {
 	background-color: #333333;
+	background-image: url(../images/congruent.png);
 	color: #fff;
 	height: 100vh;
 	width: 100%;
+
 }
 
 .form-custom{ margin: 10px 25px; }
@@ -28,15 +30,46 @@
 
 .color { color: #00e645; }
 
-.jumbotron > .container-fluid > h1 { font-size: 700%; }
+.jumbotron > .container-fluid > h1 { 
+	font-size: 700%;
+	font-family: 'Russo One', sans-serif;
+	text-shadow: 3px 2px black;
+
+ }
 
 #submit { animation-delay: 5s; }
 
 .panel-custom { border-color: #333333 }
 
-.panel-primary > .panel-heading { background-color: #333333; }
+.panel-primary > .panel-heading { 
+	background-color: #333333;
+	background-image: url(../images/congruent.png);
+ }
 
 #gator-pic {
 	height: 50%;
 	width: 40%;
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter:         drop-shadow(5px 5px 5px #222);
 }
+
+
+#bandName:focus {
+  border-color: #00e645;
+  background-color: #fff;
+  outline: none;
+}
+
+div .form-group .form-custom #location:foucs{
+	border-color: #00e645;
+  background-color: #fff;
+  outline: none;
+
+}
+
+h1 {
+	font-family: 'Russo One', sans-serif;
+	text-shadow: 3px 2px black;
+}
+
+

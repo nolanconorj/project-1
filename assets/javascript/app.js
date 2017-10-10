@@ -6,6 +6,10 @@ $(document).ready(function() {
 
         event.preventDefault();
 
+        $('html,body').animate({
+        scrollTop: $("#second").offset().top},
+        'slow');
+
         var bandSearch = $('#bandName').val().trim();
         var bandQueryURL = "https:itunes.apple.com/search?term=" + bandSearch + "&limit=100";
         var json;
