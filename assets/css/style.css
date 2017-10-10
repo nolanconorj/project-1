@@ -53,6 +53,17 @@
     filter:         drop-shadow(5px 5px 5px #222);
 }
 
+.clearfix {
+    overflow: auto;
+}
+
+#div-holder { 
+    position: absolute; 
+    bottom: 5%;
+    left: 15%;
+    right: 15%;
+ }
+
 
 #bandName:focus {
   border-color: #00e645;
@@ -60,16 +71,8 @@
   outline: none;
 }
 
-div .form-group .form-custom #location:foucs{
-	border-color: #00e645;
-  background-color: #fff;
-  outline: none;
 
-}
 
-h1 {
-	font-family: 'Russo One', sans-serif;
-	text-shadow: 3px 2px black;
-}
+
 
 
