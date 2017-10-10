@@ -64,6 +64,12 @@
     right: 15%;
  }
 
+ .form-control:focus{
+ 	border-color: #00e645 ;
+    background-color: #fff;
+    outline: none;
+ }
+
 
 #bandName:focus {
   border-color: #00e645;
