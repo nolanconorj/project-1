@@ -5,8 +5,7 @@
     <title>iTailGator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -92,7 +91,6 @@
                     </div>
                     <!-- end panel heading -->
                     <div class="panel-body" id="weather">
-
                     </div>
                     <!-- end panel body -->
                 </div>
@@ -107,11 +105,16 @@
                     <div class="panel-body">
                         <a class="twitter-timeline" href="https://twitter.com/hashtag/tailgating" data-widget-id="916684687283716097" height="750px">#tailgating Tweets</a>
                         <script>
-                        ! function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0],
-                                p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s);
+                        ! function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0],
+                                p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
                                 js.id = id;
                                 js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, "script", "twitter-wjs");
                         </script>
                     </div>
                     <!-- end panel body -->
