@@ -3,129 +3,179 @@
 
 <head>
     <title>iTailGator</title>
+
+    <link rel="icon" type="image/png" href="assets/images/iTailGator.png" height="32px" width="32px">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src='assets/javascript/app.js'></script>
+
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="jumbotron text-center jumbotron-custom clearfix">
-                <div class="container-fluid">
-                    <h1 class="animated pulse">
-                        <span class="color">i</span>TailGator<img id="gator-pic" src="assets/images/iTailGator.png"/>
-                    </h1>
-                    <div class="text-center" id="div-holder">
-                        <h2>
-                            Going to a concert or seeing a band soon?
-                        </h2>
-                        <p>
-                            Enter the band name and the city, country you're seeing them to get random iTunes songs and the weather you can expect for that day!
-                        </p>
-                        <form class="form-inline" action="/action_page.php">
-                            <div class="form-group form-custom">
-                                <label for="bandName">Band Name:</label>
-                                <input type="text" class="form-control" id="bandName" placeholder="Band name" name="bandName">
-                            </div>
-                            <div class="form-group form-custom">
-                                <label for="location">Venue City:</label>
-                                <input type="text" class="form-control" id="location" name="location" placeholder="City, Country">
-                            </div>
-                            <br>
-                            <br>
-                            <button type="submit" class="btn btn-default btn-lg btn-custom animated bounce" id="submit">Submit</button>
-                        </form>
-                    </div>
-                    <!-- div holder -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron text-center jumbotron-custom clearfix">
+            <div class="container-fluid">
+                <h1 class="animated pulse">
+                    <span class="color-green">i</span>TailGator<img id="gator-pic" src="assets/images/iTailGator.png"/>
+                </h1>
+                <div class="text-center" id="div-holder">
+                    <h2>
+                        Going to a concert or seeing a band soon?
+                    </h2>
+                    <p>
+                        Enter the band name and the city, country you're seeing them to get random iTunes songs and the weather you can expect for that day!
+                    </p>
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-group form-custom">
+                            <label for="bandName">Band Name:</label>
+                            <input type="text" class="form-control" id="bandName" placeholder="Band name" name="bandName">
+                        </div>
+                        <div class="form-group form-custom">
+                            <label for="location">Venue City:</label>
+                            <input type="text" class="form-control" id="location" name="location" placeholder="City, Country">
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-default btn-lg btn-custom animated bounce" id="submit">Submit</button>
+                    </form>
                 </div>
-                <!-- end container fluid -->
+                <!-- div holder -->
             </div>
-            <!-- end jumbotron text center jumbotron custom -->
+            <!-- end container fluid -->
         </div>
-        <!-- end col md 12 -->
+        <!-- end jumbotron text center jumbotron custom -->
+    </div>
+    <!-- end col md 12 -->
+</div>
+<!-- end row -->
+<div class="container container-custom">
+<div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-primary panel-custom" id="second">
+            <div class="panel-heading">
+                <h2 class="text-center">
+                    <span class="color-green"><i class="fa fa-apple" aria-hidden="true"></i> iTunes</span>
+                </h2>
+            </div>
+            <!-- end panel heading -->
+            <div class="panel-body clearfix">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Band Name</th>
+                            <th>Song Name</th>
+                            <th>Album Art</th>
+                            <th>Album Name</th>
+                            <th>Song Price</th>
+                            <th>Album Price</th>
+                            <th>Audio Player</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itunes">
+                    </tbody>
+                </table>
+            </div>
+            <!-- end panel body -->
+        </div>
+        <!-- end panel panel primary -->
+    </div>
+    <!-- end col md 9 -->
+    <div class="col-md-4">
+        <div class="panel panel-primary panel-custom">
+            <div class="panel-heading">
+                <h2 class="text-center"> 
+                    <span class="color-green"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+                </h2>
+            </div>
+            <!-- end panel heading -->
+            <div class="panel-body" id="weather">
+            </div>
+            <!-- end panel body -->
+        </div>
+        <!-- end panel panel primary -->
+        <div class="panel panel-primary panel-custom">
+            <div class="panel-heading panel-heading-custom">
+                <h2 class="text-center">
+                    <span class="color-green"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                </h2>
+            </div>
+            <!-- end panel heading -->
+            <div class="panel-body">
+                <a class="twitter-timeline" href="https://twitter.com/hashtag/tailgating" data-widget-id="916684687283716097" height="750px">#tailgating Tweets</a>
+                <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+                </script>
+            </div>
+            <!-- end panel body -->
+        </div>
+        <!-- end panel panel danger -->
+    </div>
+    <!-- end col md 3 -->
+</div>
+<!-- end row -->
+</div>
+<!-- end container -->
+
+<footer class="container-fluid custom-footer clearfix">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="col-md-offset-3 col-md-6">
+                <ul class="color-white small">
+                    <li class="list-unstyled footer-size">Project Team</li>
+                    <li class="list-unstyled">Chris Volonnino</li>
+                    <li class="list-unstyled">John Shari</li>
+                    <li class="list-unstyled">Conor Nolan</li>
+                </ul>
+            </div>
+            <!-- end col md offset 3 col md 6 -->
+        </div>
+        <!-- end col md 4 -->
+        <div class="col-md-4">
+            <div class="col-md-offset-3 col-md-6">
+                <ul class="color-white small">
+                    <li class="list-unstyled footer-size">Github</li>
+                    <li class="list-unstyled"><a href="https://github.com/nolanconorj/project-1"<span class="color-white"><i class="fa fa-github-square custom-icon" aria-hidden="true"></i></span></a></li>
+                </ul>
+            </div>
+            <!-- end col md offset 3 col md 6 -->
+        </div>
+        <!-- end col md 4 -->
+        <div class="col-md-4">
+            <div class="col-md-offset-3 col-md-6">
+                <ul class="color-white small">
+                    <li class="list-unstyled footer-size">Social Media</li>
+                    <ul class="list-inline">
+                        <li class="list-unstyled"><a href="https://itunes.com"<span class="color-white"><i class="fa fa-apple custom-icon" aria-hidden="true"></i></span></a></li>
+                        <li class="list-unstyled"><a href="https://weather.com/"<span class="color-white"><i class="fa fa-cloud custom-icon" aria-hidden="true"></i></span></a></li>
+                        <li class="list-unstyled"><a href="https://twitter.com"<span class="color-white"><i class="fa fa-twitter custom-icon" aria-hidden="true"></i></span></a></li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- end col md offset 3 col md 6 -->
+        </div>
+        <!-- end col md 4 -->
     </div>
     <!-- end row -->
-    <div class="container container-custom">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="panel panel-primary panel-custom" id="second">
-                    <div class="panel-heading">
-                        <h2 class="text-center">
-                            <span class="color"><i class="fa fa-apple" aria-hidden="true"></i> iTunes</span>
-                        </h2>
-                    </div>
-                    <!-- end panel heading -->
-                    <div class="panel-body clearfix">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Band Name</th>
-                                    <th>Song Name</th>
-                                    <th>Album Art</th>
-                                    <th>Album Name</th>
-                                    <th>Song Price</th>
-                                    <th>Album Price</th>
-                                    <th>Audio Player</th>
-                                </tr>
-                            </thead>
-                            <tbody id="itunes">
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- end panel body -->
-                </div>
-                <!-- end panel panel primary -->
-            </div>
-            <!-- end col md 9 -->
-            <div class="col-md-4">
-                <div class="panel panel-primary panel-custom">
-                    <div class="panel-heading">
-                        <h2 class="text-center"> 
-                            <span class="color"><i class="fa fa-cloud" aria-hidden="true"></i></span>
-                        </h2>
-                    </div>
-                    <!-- end panel heading -->
-                    <div class="panel-body" id="weather">
-                    </div>
-                    <!-- end panel body -->
-                </div>
-                <!-- end panel panel primary -->
-                <div class="panel panel-primary panel-custom">
-                    <div class="panel-heading panel-heading-custom">
-                        <h2 class="text-center">
-                            <span class="color"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-                        </h2>
-                    </div>
-                    <!-- end panel heading -->
-                    <div class="panel-body">
-                        <a class="twitter-timeline" href="https://twitter.com/hashtag/tailgating" data-widget-id="916684687283716097" height="750px">#tailgating Tweets</a>
-                        <script>
-                        ! function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                                p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");
-                        </script>
-                    </div>
-                    <!-- end panel body -->
-                </div>
-                <!-- end panel panel danger -->
-            </div>
-            <!-- end col md 3 -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
+</footer>
+<!-- end container fluid custom footer -->
+
 </body>
 
 </html>
