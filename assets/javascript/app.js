@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+
+
     
 
     $('#submit').on('click', function(event) {
@@ -58,5 +60,47 @@ $(document).ready(function() {
         }); // end weather ajax call
 
     }); // end on submit button click
+
+           
+                
+
+
+
+
+    $('#submit').on('click', function(event) {
+        var el = $('#beerSub').val().trim();
+    })
+       
+        //var key = "&key=f4d802b4a87a8c458a9fe696c2db3acd";
+        //var beerSearch = $('#br').val().trim();
+        $("#beerSub").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    var beerSearch = $("#br").val().trim();
+
+    // Running the searchBandsInTown function (passing in the artist as an argument)
+    
+
+
+
+            var beerQueryURL = "https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/search?q=" + beerSearch + "&type=beer&key=f4d802b4a87a8c458a9fe696c2db3acd/";
+
+            $.ajax({
+                url: beerQueryURL,
+                method: 'GET'
+            }).done(function(response) {
+                console.log(response);
+
+                
+           });     
+    
+
+        })
+        
+    
+            
+
+
 
 }); // end document ready
