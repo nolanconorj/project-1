@@ -13,7 +13,7 @@ $(document).ready(function() {
         'slow');
 
         var bandSearch = $('#bandName').val().trim();
-        var bandQueryURL = "https:itunes.apple.com/search?term=" + bandSearch + "&limit=100";
+        var bandQueryURL = "https://iitunes.apple.com/search?term=" + bandSearch + "&limit=100";
         var json;
 
         $.ajax({
